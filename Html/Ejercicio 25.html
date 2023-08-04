@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <form>
+    <p>ingrese un numero
+        <input type="text" id="numero1"></p>
+    <p>ingrese otro numero
+        <input type="text" id="numero2"></p>
+    <p>ingrese un nombre
+        <input type="text" id="nombre"></p>
+    <p>ingrese un apellido
+        <input type="text" id="apellido"></p>
+
+    <p><input type="button" onClick="button1()" value="Numero al cubo">
+    
+        <input type="button" onClick="button2()" value="Mayor">
+
+        <input type="button" onClick="concatenar()" value="Concatenar Nombre y apellido">
+    </p>
+    
+    </form>
+
+    <script>
+       let num1 = parseInt(document.getElementById('numero1').value);
+       let num2 = parseInt(document.getElementById('numero2').value);
+       let nombre = document.getElementById('nombre').value;
+       let apellido = document.getElementById('apellido').value;
+       function button1(){
+        alert(num1*num1*num1);
+       }
+
+       function button2(){
+            if(num1>num2){
+                alert("el mayor es" + num1);
+        }  else{
+            alert("el mayor es:" + num2)
+        }
+        }
+        
+        function concatenar(){
+            let nombreJunto = nombre + " " + apellido;
+            alert(nombreJunto);
+        }
+    </script>
+
+</body>
+
+</html>

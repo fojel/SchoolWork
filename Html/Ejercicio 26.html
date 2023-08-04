@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <form>
+    <p>ingrese la contraseña
+        <input type="text" id="password"></p>
+    <p>ingrese de nuevo la contraseña
+        <input type="text" id="checkYourPass"></p>
+
+    <p><input type="button" onClick="passCheck()" value="Verificar si son iguales"></p>
+    
+    </form>
+
+    <script>
+       let pass = document.getElementById('password').value;
+       let passAgain = document.getElementById('checkYourPass').value;
+         
+        function passCheck(){
+            if(pass == passAgain){
+                alert("las contraseñas ingresadas coinciden");
+            } else{
+                alert("intente de nuevo, contraseñas mal ingresadas");
+            }
+            
+        }
+    </script>
+
+</body>
+
+</html>
